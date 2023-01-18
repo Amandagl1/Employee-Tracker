@@ -1,16 +1,41 @@
 # Employee-Tracker
 
-## Description
+## Badges
+![ICS](https://img.shields.io/badge/license-ICS-orange)
+
+## Table of Contents
+- [License](#license)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deployed Application](#deployed-application)
+- [Contact](#contact)
+
 
 ## License
-The license for this project: ISC
+Read more about the license herr: [ICS](https://choosealicense.com/licenses/isc/)
 
-## Walkthrough
+## Installation
 
-## Contact me
-### Any questions? Reach me here:
+Run this command in the terminal to install inquirer.
+```
+npm i inquirer@8.2.4
+```
+
+
+## Usage
+
+
+## Deployed Application
+Check out my [Employee Tracker](https://note-taker-2023.herokuapp.com/) app on Heroku.
+
+# Contact
+
+### Questions? 
+Reach me here:
+
+Github: Amandagl1  
 Email: leeandama87@gmail.com
-GitHub: Amandagl1
+
 
 
 ## Your Task
