@@ -6,6 +6,7 @@
 ## Table of Contents
 - [License](#license)
 - [Installation](#installation)
+- [Mock Up](#mock-up)
 - [Usage](#usage)
 - [Deployed Application](#deployed-application)
 - [Contact](#contact)
@@ -21,8 +22,12 @@ Run this command in the terminal to install inquirer.
 npm i inquirer@8.2.4
 ```
 
+## Mock Up
+![Mock Up](Develop/images/mockup.pngDevelop/images/mockup.png)
 
 ## Usage
+![]()
+![]()
 
 
 ## Deployed Application
