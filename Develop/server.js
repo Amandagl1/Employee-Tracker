@@ -111,7 +111,7 @@ const addRole = async() => {
       function(err) {
         if (err) throw err
         console.table(data);
-    Amanda    mainMenu();
+        mainMenu();
       }
     )
   });
@@ -121,15 +121,14 @@ const addEmployee = async() => {
   const [roles] = await db.promise().query('SELECT * FROM role')
   const rolesArray = roles.map(role => (
       {
-          title: role.title,
-          value: role.department_id
+          name: role.title,
+          value: role.id
       }
   ));
 
     inquirer.prompt([{type: 'input', name: 'First_Name', message: 'Enter the first name of the new employee.'},
     {type: 'input', name: 'Last_Name', message: 'Enter the last name of the new employee.'},
-    {type: 'input', name: 'Role', message: 'Enter their role id.', choices: rolesArray},
-    {type: 'input', name: 'Manager', message: 'Enter the name of the manager.'}
+    {type: 'list', name: 'Role', message: 'Select their role.', choices: rolesArray},
 
   ]).then(function(data) {
 
@@ -139,7 +138,7 @@ const addEmployee = async() => {
           first_name: data.First_Name,
           last_name: data.Last_Name,
           role_id: data.Role,
-          manager_id: data.Manager
+          manager_id: 1
         },
 
         function(err) {
