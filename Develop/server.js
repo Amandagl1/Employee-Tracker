@@ -68,29 +68,21 @@ const viewEmployees = () => {
 };
 
 const addDepartment = async() => {
-  const [department] = await db.promise().query('SELECT * FROM department')
-  const departmentArray = department.join(department => (
-      {
-          name: department.name,
-          value: department.id
-      }
-  ));
+
     inquirer.prompt({type: 'input', name: 'departmentName', message: 'Enter the name of the new department.'})
     .then(function(data) {
       db.query(
-          "INSERT INTO role SET ?",
-          {
-            name: data.departmentName,
-            value: data.id
-          },
+      "INSERT INTO department SET ?",
+        {
+          name: data.departmentName,
+        },
 
-          function(err) {
-              if (err) throw err
-              console.table(data);
-              mainMenu();
-          }
+        function(err) {
+          if (err) throw err
+          console.table(data);
+          mainMenu();
+        }
       )
-    
     });
   }
 
@@ -107,9 +99,8 @@ const addRole = async() => {
     {type: 'input', name: 'Salary', message: 'Enter the salary.'},
     {type: 'list', name: 'Department', message: 'Select the department', choices: departmentArray}
 
-  ]).then(function(data) {
-
-  db.query(
+    ]).then(function(data) {
+      db.query(
       "INSERT INTO role SET ?",
       {
         title: data.Role_Title,
@@ -118,33 +109,32 @@ const addRole = async() => {
       },
 
       function(err) {
-          if (err) throw err
-          console.table(data);
-          mainMenu();
+        if (err) throw err
+        console.table(data);
+    Amanda    mainMenu();
       }
     )
-
   });
 }
 
 const addEmployee = async() => {
-  const [employees] = await db.promise().query('SELECT * FROM employee')
-  const employeesArray = employees.map(employee => (
+  const [roles] = await db.promise().query('SELECT * FROM role')
+  const rolesArray = roles.map(role => (
       {
-          name: employee.name,
-          value: employee.id
+          title: role.title,
+          value: role.department_id
       }
   ));
 
     inquirer.prompt([{type: 'input', name: 'First_Name', message: 'Enter the first name of the new employee.'},
     {type: 'input', name: 'Last_Name', message: 'Enter the last name of the new employee.'},
-    {type: 'input', name: 'Role', message: 'Select their role.', choices: employeesArray},
+    {type: 'input', name: 'Role', message: 'Enter their role id.', choices: rolesArray},
     {type: 'input', name: 'Manager', message: 'Enter the name of the manager.'}
 
   ]).then(function(data) {
 
     db.query(
-        "INSERT INTO role SET ?",
+        "INSERT INTO employee SET ?",
         {
           first_name: data.First_Name,
           last_name: data.Last_Name,
@@ -161,29 +151,5 @@ const addEmployee = async() => {
   
   });
 }
-
-// const roleArray = [];
-// function selectRole() {
-//   db.query("SELECT * FROM role", function(err, data) {
-//     if (err) throw err
-//     for (var i = 0; i < data.length; i++) {
-//       roleArray.push(data[i].title);
-//     }
-
-//   })
-//   return roleArray;
-// }
-
-// const managersArray = [];
-// function selectManager() {
-//   db.query("SELECT first_name, last_name FROM employee WHERE manager_id IS NULL", function(err, data) {
-//     if (err) throw err
-//     for (var i = 0; i < data.length; i++) {
-//       managersArray.push(data[i].first_name);
-//     }
-
-//   })
-//   return managersArray;
-// }
 
 mainMenu();
