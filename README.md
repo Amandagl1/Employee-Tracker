@@ -13,7 +13,7 @@
 
 
 ## License
-Read more about the license herr: [ICS](https://choosealicense.com/licenses/isc/)
+Read more about the license here: [ICS](https://choosealicense.com/licenses/isc/)
 
 ## Installation
 
