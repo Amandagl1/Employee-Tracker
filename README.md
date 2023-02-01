@@ -8,7 +8,6 @@
 - [Installation](#installation)
 - [Mock Up](#mock-up)
 - [Usage](#usage)
-- [Deployed Application](#deployed-application)
 - [Contact](#contact)
 
 
@@ -22,13 +21,18 @@ Run this command in an integrated terminal to install inquirer.
 npm i inquirer@8.2.4
 ```
 
+## Tests
+To test the application, run this code in the CLI:
+```
+npm start
+```
 
 ## Mock Up
 <img src="Develop/images/mockup.png" alt="Mockup" width="700px"/>
 
 ## Usage
 Watch the walkthrough of how ot use the application in the CLI:
-<img src="Develop/images/Employee-Tracker.webm" alt="Walkthrough" width="700px"/>
+[Employee-Tracker.webm](https://user-images.githubusercontent.com/113318764/215958190-35f55676-b673-42cf-a2dc-b03db2b21294.webm)
 
 **View the database:**  
 ![View database](Develop/images/view-db.png)  
