@@ -6,6 +6,7 @@
 ## Table of Contents
 - [License](#license)
 - [Installation](#installation)
+- [Tests](#tests)
 - [Mock Up](#mock-up)
 - [Usage](#usage)
 - [Contact](#contact)
