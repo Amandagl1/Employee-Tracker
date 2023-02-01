@@ -32,7 +32,7 @@ npm start
 
 ## Usage
 Watch the walkthrough of how ot use the application in the CLI:
-[Employee-Tracker.webm](https://user-images.githubusercontent.com/113318764/215958190-35f55676-b673-42cf-a2dc-b03db2b21294.webm)
+[Employee Tracker Walkthrough](https://user-images.githubusercontent.com/113318764/215958190-35f55676-b673-42cf-a2dc-b03db2b21294.webm)
 
 **View the database:**  
 ![View database](Develop/images/view-db.png)  
